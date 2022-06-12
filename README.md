@@ -1,4 +1,4 @@
-Queria saber si era preferible en un multiplechoice adiviniar siempre con A, o si era lo mismo que siempre tirar alelatoriamente(SPOILER: es lo mismo, simplemente queria una excusa para probar graficos en python)
+Queria saber si era preferible en un multiplechoice adiviniar siempre con A, o si era lo mismo que tirar alelatoriamente (SPOILER: es lo mismo, simplemente queria una excusa para probar graficos en python)
 
 
 
