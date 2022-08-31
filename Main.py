@@ -1,15 +1,17 @@
 # Para hacer graficos
 import matplotlib.pyplot as plt
-
+import numpy as np
 # Para alelatoriedad
 from random import sample
 
-def plot(correctas, titulo):
-
+def plot(correctas, titulo, promedio):
+    legends =['correctas', 'promedio']
     fig, ax = plt.subplots()
     ax.plot(correctas.keys(),correctas.values(), color='green')
     ax.set(xlabel='Intentos', ylabel='Nota',
            title='Prueba de Pruebas ' + titulo)
+    plt.axhline(y=promedio)
+    ax.legend(legends)
     ax.grid()
     plt.show()
 
@@ -33,7 +35,7 @@ def intento(preguntas, opciones, repetir):
         promedioFinal += correctas[i]
     promedioFinal = promedioFinal/ int(repetir)
     print(promedioFinal)
-    return plot(correctas, "Alelatorio")
+    return plot(correctas, "Alelatorio", promedioFinal)
 
 def intentoA(preguntas, opciones, repetir):
     correctas = {}
@@ -49,7 +51,7 @@ def intentoA(preguntas, opciones, repetir):
         promedioFinal += correctas[i]
     promedioFinal = promedioFinal/ int(repetir)
     print(promedioFinal)
-    return plot(correctas, "todas A")
+    return plot(correctas, "todas A", promedioFinal)
 
 (intentoA(10, [1,2,3,4], input("cantidad de veces que hacerlo tirando siempre A: ")))
 (intento(10, [1,2,3,4], input("cantidad de veces que hacerlo tirando alelatorio: ")))
